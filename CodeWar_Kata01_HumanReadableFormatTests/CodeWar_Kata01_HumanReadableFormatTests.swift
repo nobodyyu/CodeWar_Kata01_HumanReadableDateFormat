@@ -129,14 +129,46 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         XCTAssertEqual(HumanReadableDateFormat(3600*24+120+1), "1 Day, 2 Minutes and 1 Second")
     }
     
-    func test29_OneDayTwoMinutesAndTwoSeconds() {
+    func test28_OneDayTwoMinutesAndTwoSeconds() {
         XCTAssertEqual(HumanReadableDateFormat(3600*24+120+2), "1 Day, 2 Minutes and 2 Seconds")
     }
 
-    func test20_TwoDays() {
+    func test29_TwoDays() {
         XCTAssertEqual(HumanReadableDateFormat(3600*24*2), "2 Days")
     }
     
+    func test30_TwoDaysAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+1), "2 Days and 1 Second")
+    }
+    
+    func test31_TwoDaysAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+2), "2 Days and 2 Seconds")
+    }
+    
+    func test32_TwoDaysAndOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+60), "2 Days and 1 Minute")
+    }
+    
+    func test33_TwoDaysAndTwoMinutes() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+120), "2 Days and 2 Minutes")
+    }
+    
+    func test34_TwoDaysOneMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+60+1), "2 Days, 1 Minute and 1 Second")
+    }
+    
+    func test35_TwoDaysOneMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+60+2), "2 Days, 1 Minute and 2 Seconds")
+    }
+    
+    func test36_TwoDaysTwoMinutesAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+120+1), "2 Days, 2 Minutes and 1 Second")
+    }
+    
+    func test37_TwoDaysTwoMinutesAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*2+120+2), "2 Days, 2 Minutes and 2 Seconds")
+    }
+
    
 
     
