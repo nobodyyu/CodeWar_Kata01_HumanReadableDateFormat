@@ -318,6 +318,155 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         XCTAssertEqual(HumanReadableDateFormat(3600*24*365+3600*24*2+120+2), "1 Year, 2 Days, 2 Minutes and 2 Seconds")
     }
 
+    func test75_TwoYears() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2), "2 Years")
+    }
+    
+    
+    func test76_TwoYearsAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+1), "2 Years and 1 Second")
+    }
+    
+    func test77_TwoYearsAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+2), "2 Years and 2 Seconds")
+    }
+    
+    func test78_TwoYearsAndOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+60), "2 Years and 1 Minute")
+    }
+    
+    func test79_TwoYearsOneMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+61), "2 Years, 1 Minute and 1 Second")
+    }
+    
+    func test80_TwoYearsOneMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+62), "2 Years, 1 Minute and 2 Seconds")
+    }
+    
+    func test81_TwoYearsANdTwoMinutes() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+120), "2 Years and 2 Minutes")
+    }
+    
+    func test82_TwoYearsTwoMinutesAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+121), "2 Years, 2 Minutes and 1 Second")
+    }
+    
+    func test83_TwoYearsTwoMinutesAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+122), "2 Years, 2 Minutes and 2 Seconds")
+    }
+    
+    func test84_TwoYearsAndOneHour() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600), "2 Years and 1 Hour")
+    }
+    
+    func test85_OneHourAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3601), "2 Years, 1 Hour and 1 Second")
+    }
+    
+    func test86_TwoYearsOneHourAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3602), "2 Years, 1 Hour and 2 Seconds")
+    }
+    
+    func test87_TwoYearsOneHourOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+60), "2 Years, 1 Hour and 1 Minute")
+    }
+    
+    func test88_TwoYearsOneHourOneMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+60+1), "2 Years, 1 Hour, 1 Minute and 1 Second")
+    }
+    
+    func test89_TwoYearsOneHourOneMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+60+2), "2 Years, 1 Hour, 1 Minute and 2 Seconds")
+    }
+    
+    func test90_TwoYearsOneHourAndTwoMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+120), "2 Years, 1 Hour and 2 Minutes")
+    }
+    
+    func test91_TwoYearsOneHourTwoMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+120+1), "2 Years, 1 Hour, 2 Minutes and 1 Second")
+    }
+    
+    func test92_TwoYearsOneHourTwoMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600+120+2), "2 Years, 1 Hour, 2 Minutes and 2 Seconds")
+    }
+    
+    func test93_TwoYearsAndTwoHours() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+7200), "2 Years and 2 Hours")
+    }
+    
+    func test94_TwoYearsAndOneDay() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24), "2 Years and 1 Day")
+    }
+    
+    func test95_TwoYearsOneDayAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+1), "2 Years, 1 Day and 1 Second")
+    }
+    
+    func test96_TwoYearsOneDayAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+2), "2 Years, 1 Day and 2 Seconds")
+    }
+    
+    func test97_TwoYearsOneDayAndOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+60), "2 Years, 1 Day and 1 Minute")
+    }
+    
+    func test98_TwoYearsOneDayAndTwoMinutes() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+120), "2 Years, 1 Day and 2 Minutes")
+    }
+    
+    func test99_TwoYearsOneDayOneMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+60+1), "2 Years, 1 Day, 1 Minute and 1 Second")
+    }
+    
+    func test100_TwoYearsOneDayOneMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+60+2), "2 Years, 1 Day, 1 Minute and 2 Seconds")
+    }
+    
+    func test101_TwoYearsOneDayTwoMinutesAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+120+1), "2 Years, 1 Day, 2 Minutes and 1 Second")
+    }
+    
+    func test102_TwoYearsOneDayTwoMinutesAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24+120+2), "2 Years, 1 Day, 2 Minutes and 2 Seconds")
+    }
+    
+    func test103_TwoYearsAndTwoDays() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2), "2 Years and 2 Days")
+    }
+    
+    func test104_TwoYearsTwoDaysAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+1), "2 Years, 2 Days and 1 Second")
+    }
+    
+    func test105_TwoYearsTwoDaysAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+2), "2 Years, 2 Days and 2 Seconds")
+    }
+    
+    func test106_TwoYearsTwoDaysAndOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+60), "2 Years, 2 Days and 1 Minute")
+    }
+    
+    func test107_TwoYearsTwoDaysAndTwoMinutes() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+120), "2 Years, 2 Days and 2 Minutes")
+    }
+    
+    func test108_TwoYearsTwoDaysOneMinuteAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+60+1), "2 Years, 2 Days, 1 Minute and 1 Second")
+    }
+    
+    func test109_TwoYearsTwoDaysOneMinuteAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+60+2), "2 Years, 2 Days, 1 Minute and 2 Seconds")
+    }
+    
+    func test110_TwoYearsTwoDaysTwoMinutesAndOneSecond() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+120+1), "2 Years, 2 Days, 2 Minutes and 1 Second")
+    }
+    
+    func test111_TwoYearsTwoDaysTwoMinutesAndTwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24*365*2+3600*24*2+120+2), "2 Years, 2 Days, 2 Minutes and 2 Seconds")
+    }
+
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
