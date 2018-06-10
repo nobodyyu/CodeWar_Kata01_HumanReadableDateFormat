@@ -7,5 +7,5 @@
 //
 
 func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
-    return "0 Second"
+    return "\(orginalSecond) Second"
 }
