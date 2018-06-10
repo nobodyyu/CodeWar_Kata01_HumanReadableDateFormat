@@ -19,7 +19,10 @@ func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
     resultMinutes = FormatFactory(Minute,"Minute")
 
     resultFinal = Conjunction(resultMinutes,resultSecond)
-    return resultFinal
+    
+    
+    
+    return resultFinal == "" ? "0 Second" : resultFinal
 }
 
 func Conjunction(_ str1:String,_ str2:String)->String{
