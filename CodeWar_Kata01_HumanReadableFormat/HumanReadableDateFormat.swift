@@ -7,9 +7,12 @@
 //
 
 func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
-    let Second = orginalSecond % 60
-    let Minute = (orginalSecond/60)
-    let Hour = (Minute/60)
+    let Hour = (orginalSecond/60/60)
+    var secondsCalculate = orginalSecond % (60*60)
+    let Minute = (secondsCalculate/60)
+    secondsCalculate = secondsCalculate % 60
+    let Second = secondsCalculate
+    
     var resultHours = ""
     var resultMinutes = ""
     var resultSecond = ""
@@ -17,15 +20,15 @@ func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
 
     resultSecond = FormatFactory(Second,"Second")
     resultMinutes = FormatFactory(Minute,"Minute")
+    resultHours = FormatFactory(Hour,"Hour")
 
-    resultFinal = Conjunction(resultMinutes,resultSecond)
-    
-    
+    resultFinal = Conjunction(resultMinutes,resultSecond,false)
+    resultFinal = Conjunction(resultHours,resultFinal,resultFinal.contains("and"))
     
     return resultFinal == "" ? "0 Second" : resultFinal
 }
 
-func Conjunction(_ str1:String,_ str2:String)->String{
+func Conjunction(_ str1:String,_ str2:String,_ hadAnd:Bool)->String{
  
     if(str1 == ""){
         return str2
@@ -34,7 +37,7 @@ func Conjunction(_ str1:String,_ str2:String)->String{
         return str1
     }
     
-    return "\(str1) and \(str2)"
+    return "\(str1)\(hadAnd ? ", ":" and ")\(str2)"
     
 }
 
