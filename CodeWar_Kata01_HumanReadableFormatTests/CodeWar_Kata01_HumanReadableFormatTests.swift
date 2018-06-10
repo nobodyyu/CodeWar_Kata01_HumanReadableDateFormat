@@ -81,6 +81,11 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         XCTAssertEqual(HumanReadableDateFormat(3600+60+2), "1 Hour, 1 Minute and 2 Seconds")
     }
     
+    func test16_OneHourTwoMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600+120), "1 Hour and 2 Minutes")
+    }
+    
+    
    
 
     
