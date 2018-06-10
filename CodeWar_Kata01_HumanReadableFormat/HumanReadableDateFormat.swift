@@ -7,12 +7,16 @@
 //
 
 func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
-    let Hour = (orginalSecond/60/60)
-    var secondsCalculate = orginalSecond % (60*60)
+    
+    let Day = (orginalSecond/60/60/24)
+    var secondsCalculate = orginalSecond % (60*60*24)
+    let Hour = (secondsCalculate/60/60)
+    secondsCalculate = secondsCalculate % (60*60)
     let Minute = (secondsCalculate/60)
     secondsCalculate = secondsCalculate % 60
     let Second = secondsCalculate
     
+    var resultDays = ""
     var resultHours = ""
     var resultMinutes = ""
     var resultSecond = ""
@@ -21,9 +25,11 @@ func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
     resultSecond = FormatFactory(Second,"Second")
     resultMinutes = FormatFactory(Minute,"Minute")
     resultHours = FormatFactory(Hour,"Hour")
-
+    resultDays = FormatFactory(Day,"Day")
+    
     resultFinal = Conjunction(resultMinutes,resultSecond,false)
     resultFinal = Conjunction(resultHours,resultFinal,resultFinal.contains("and"))
+    resultFinal = Conjunction(resultDays,resultFinal,resultFinal.contains("and"))
     
     return resultFinal == "" ? "0 Second" : resultFinal
 }
