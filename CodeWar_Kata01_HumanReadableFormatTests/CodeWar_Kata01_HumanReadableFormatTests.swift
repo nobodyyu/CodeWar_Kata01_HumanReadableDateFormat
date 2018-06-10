@@ -109,6 +109,10 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         XCTAssertEqual(HumanReadableDateFormat(3600*24+2), "1 Day and 2 Seconds")
     }
 
+    func test223_OneDayAndOneMinute() {
+        XCTAssertEqual(HumanReadableDateFormat(3600*24+60), "1 Day and 1 Minute")
+    }
+
     
    
 
