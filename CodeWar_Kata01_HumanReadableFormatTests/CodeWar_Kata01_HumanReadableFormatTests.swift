@@ -22,11 +22,10 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
     }
     
     func test01_ZeroSecond() {
-        
-        XCTAssertEqual(HumanReadableDateFormat(0), "0")
-
-        
+        XCTAssertEqual(HumanReadableDateFormat(0), "0 Second")
     }
+
+  
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
