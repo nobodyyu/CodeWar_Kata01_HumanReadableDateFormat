@@ -7,25 +7,17 @@
 //
 
 func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
-    
-    let Minute = (orginalSecond/60)
     let Second = orginalSecond % 60
-    
+    let Minute = (orginalSecond/60)
+    let Hour = (Minute/60)
+    var resultHours = ""
     var resultMinutes = ""
     var resultSecond = ""
     var resultFinal = ""
-    
-    if Minute == 0 {
-        resultSecond = FormatFactory(Second,"Second")
-        resultMinutes = ""
-        
-    }else{
-        if Second != 0 {
-            resultSecond = FormatFactory(Second,"Second")
-        }
-        resultMinutes = FormatFactory(Minute,"Minute")
-    }
-    
+
+    resultSecond = FormatFactory(Second,"Second")
+    resultMinutes = FormatFactory(Minute,"Minute")
+
     resultFinal = Conjunction(resultMinutes,resultSecond)
     return resultFinal
 }
@@ -44,5 +36,8 @@ func Conjunction(_ str1:String,_ str2:String)->String{
 }
 
 func FormatFactory(_ cnt:Int,_ Symbol:String)->String{
+    if cnt == 0 {
+        return ""
+    }
     return "\(cnt) \(Symbol)\((cnt > 1 ? "s" : ""))"
 }
