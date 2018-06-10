@@ -25,10 +25,14 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         XCTAssertEqual(HumanReadableDateFormat(0), "0 Second")
     }
 
-    func test01_OneSecond() {
+    func test02_OneSecond() {
         XCTAssertEqual(HumanReadableDateFormat(1), "1 Second")
     }
   
+    func test03_TwoSeconds() {
+        XCTAssertEqual(HumanReadableDateFormat(2), "2 Seconds")
+    }
+
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
