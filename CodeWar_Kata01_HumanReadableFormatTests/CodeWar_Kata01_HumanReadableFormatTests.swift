@@ -21,7 +21,7 @@ class CodeWar_Kata01_HumanReadableFormatTests: XCTestCase {
         super.tearDown()
     }
     
-    func test01_second() {
+    func test01_ZeroSecond() {
         
         XCTAssertEqual(HumanReadableDateFormat(0), "0")
 
