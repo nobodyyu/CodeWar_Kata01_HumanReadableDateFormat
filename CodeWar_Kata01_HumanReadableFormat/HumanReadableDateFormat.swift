@@ -8,36 +8,39 @@
 
 func HumanReadableDateFormat(_ orginalSecond:Int) -> String {
     
-    let Hour = (orginalSecond/60/60)
     let Minute = (orginalSecond/60)
     let Second = orginalSecond % 60
     
     var resultMinutes = ""
     var resultSecond = ""
     var resultFinal = ""
-    var conjunctionMinSec = ""
-    
-    if Hour == 0 {
-        
-    }
     
     if Minute == 0 {
         resultSecond = FormatFactory(Second,"Second")
         resultMinutes = ""
         
-        resultFinal = "\(resultSecond)"
     }else{
         if Second != 0 {
             resultSecond = FormatFactory(Second,"Second")
-            conjunctionMinSec = " and "
         }
         resultMinutes = FormatFactory(Minute,"Minute")
-
-        resultFinal = "\(resultMinutes)\(conjunctionMinSec)\(resultSecond)"
     }
     
-    
+    resultFinal = Conjunction(resultMinutes,resultSecond)
     return resultFinal
+}
+
+func Conjunction(_ str1:String,_ str2:String)->String{
+ 
+    if(str1 == ""){
+        return str2
+    }
+    if str2 == "" {
+        return str1
+    }
+    
+    return "\(str1) and \(str2)"
+    
 }
 
 func FormatFactory(_ cnt:Int,_ Symbol:String)->String{
