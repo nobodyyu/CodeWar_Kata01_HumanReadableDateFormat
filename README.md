@@ -1,6 +1,6 @@
 
-<a href="https://github.com/jed1978"><img src="https://img.shields.io/badge/JDD-Jed%20%E9%A9%85%E5%8B%95%E9%96%8B%E7%99%BC-red.svg" 
-alt="JDD-Jed驅動開發"  /></a>
+[![JDD](https://img.shields.io/badge/JDD-Jed%20%E9%A9%85%E5%8B%95%E9%96%8B%E7%99%BC-red.svg)](https://github.com/jed1978)
+
 
 # Human Readable Format
 
